@@ -129,7 +129,8 @@ class Client:
         """
         return {
             'Bearer': self._add_bearer_token,
-            'MAC': self._add_mac_token
+            'MAC': self._add_mac_token,
+            'User Access Token': self._add_bearer_token  # for compatibility with ebay
         }
 
     def prepare_request_uri(self, *args, **kwargs):
